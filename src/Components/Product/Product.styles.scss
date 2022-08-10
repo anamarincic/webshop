@@ -1,0 +1,26 @@
+@import "../../Styles/_index.scss";
+
+.product {
+  width: 300px;
+  height: fit-content;
+  border: 1px solid grey;
+  margin: 10px;
+  @include display(flex, column, nowrap, center);
+  align-items: center;
+
+  &__img {
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+  }
+
+  &__description {
+    @include display(flex, row, nowrap, space-around);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    margin-bottom: 10px;
+  }
+}

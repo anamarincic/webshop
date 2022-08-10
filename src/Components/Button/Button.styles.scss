@@ -1,0 +1,17 @@
+.button {
+  border: 1px solid black;
+  text-align: center;
+
+  &--text {
+    width: 100px;
+    padding: 4px;
+  }
+
+  &--icon {
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    border-radius: 50%;
+  }
+}

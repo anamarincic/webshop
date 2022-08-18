@@ -13,6 +13,28 @@ body {
 }
 
 .app {
+  @include display(flex, column, nowrap, center);
+}
+
+.header {
+  background-image: url("../public/images/skin.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  line-height: 50vh;
+  text-align: center;
+
+  &__title {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.main {
   @include display(flex, row, nowrap, center);
   font-size: 1.5rem;
   padding: 10px;

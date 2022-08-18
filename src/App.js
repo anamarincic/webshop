@@ -93,6 +93,10 @@ function App() {
 
   return (
       <div className="app">
+        <div className="header">
+          <h1 className="header__title">A BLESSING OF WATER <br /> FOR EVERY SKIN</h1>
+        </div>
+        <div className="main">
         <div className="cart">
           <div className="cart__total-item">
             {itemNumbers === 0 && 'Your cart is empty!'}
@@ -105,6 +109,7 @@ function App() {
         </div>
         <div className="product-list">
             {data}
+        </div>
         </div>
       </div>
   );

@@ -30,7 +30,7 @@ export function CartItem(props) {
             <div className="cart-item__description">
                 <Button variant="icon" name="removeItem" dataSize={data} onClick={props.onClick}>x</Button>
                 <div className="cart-item__description-name">{props.name}</div>
-                <div className="cart-item__description-price">{props.price}</div>
+                <div className="cart-item__description-price">{props.price} $</div>
                 <div className="cart-item__description-units">
                     <Button variant="icon" className="plus" name="addItem" onClick={updateNumberOfUnits}>+</Button>
                     <div className="numberOfUnits">{numberOfUnits}</div>

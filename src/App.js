@@ -24,11 +24,13 @@ function App() {
     setTotalPrice((state) => state -= price);
   }
 
-  const addItem = (item) => { 
+  const addItem = (item, event) => { 
     if(cart.includes(item) === true) {
-      return ;
+      alert("already added to cart");
     }else{
       setCart((state) => [...state, item]);
+      itemTotalPriceIncrease(item.price);
+      itemCounter(event);
     }
   }
 
@@ -41,14 +43,14 @@ function App() {
 
   const cartData = cart.map((item) => {
 
-    const number = (num) => {
-      setItemNumbers((state) => state - num);
+    const updateCartNum = (numOfUnit) => {
+      setItemNumbers((state) => state - numOfUnit);
     }
 
     const handleClick = (event) => {
       let numOfUnit = event.target.attributes[2].nodeValue;
       deleteItem(item, numOfUnit);
-      number(numOfUnit);
+      updateCartNum(numOfUnit);
     }
 
     const numberOfUnits = (event) => {
@@ -75,10 +77,7 @@ function App() {
   const data = products.map((product) => {
 
     const handleClick = (event) => {
-      itemCounter(event);
-      itemTotalPriceIncrease(product.price);
-      addItem(product);
-      console.log(event);
+      addItem(product, event);
     }
 
     return (
